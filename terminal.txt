@@ -1,0 +1,965 @@
+..\forum-api>nvm list      
+
+  * 24.4.0 (Currently using 64-bit executable)
+    20.15.1
+    18.19.0
+    18.13.0
+
+..\forum-api>nvm list available
+
+|   CURRENT    |     LTS      |  OLD STABLE  | OLD UNSTABLE |
+|--------------|--------------|--------------|--------------|
+|    25.1.0    |   24.11.0    |   0.12.18    |   0.11.16    |
+|    25.0.0    |   22.21.1    |   0.12.17    |   0.11.15    |
+|   24.10.0    |   22.21.0    |   0.12.16    |   0.11.14    |
+|    24.9.0    |   22.20.0    |   0.12.15    |   0.11.13    |
+|    24.8.0    |   22.19.0    |   0.12.14    |   0.11.12    |
+|    24.7.0    |   22.18.0    |   0.12.13    |   0.11.11    |
+|    24.6.0    |   22.17.1    |   0.12.12    |   0.11.10    |
+|    24.5.0    |   22.17.0    |   0.12.11    |    0.11.9    |
+|    24.4.1    |   22.16.0    |   0.12.10    |    0.11.8    |
+|    24.4.0    |   22.15.1    |    0.12.9    |    0.11.7    |
+|    24.3.0    |   22.15.0    |    0.12.8    |    0.11.6    |
+|    24.2.0    |   22.14.0    |    0.12.7    |    0.11.5    |
+|    24.1.0    |   22.13.1    |    0.12.6    |    0.11.4    |
+|    24.0.2    |   22.13.0    |    0.12.5    |    0.11.3    |
+|    24.0.1    |   22.12.0    |    0.12.4    |    0.11.2    |
+|    24.0.0    |   22.11.0    |    0.12.3    |    0.11.1    |
+|   23.11.1    |   20.19.5    |    0.12.2    |    0.11.0    |
+|   23.11.0    |   20.19.4    |    0.12.1    |    0.9.12    |
+|   23.10.0    |   20.19.3    |    0.12.0    |    0.9.11    |
+|    23.9.0    |   20.19.2    |   0.10.48    |    0.9.10    |
+
+This is a partial list. For a complete list, visit https://nodejs.org/en/download/releases
+
+..\forum-api>nvm install 22.21.1
+Downloading node.js version 22.21.1 (64-bit)...
+Extracting node and npm...
+Complete
+npm v10.9.4 installed successfully.
+
+
+Installation complete. If you want to use this version, type
+
+nvm use 22.21.1
+
+..\forum-api>nvm use 22.21.1
+Now using node v22.21.1 (64-bit)
+
+..\forum-api>nvm list           
+
+    24.4.0
+  * 22.21.1 (Currently using 64-bit executable)
+    20.15.1
+    18.19.0
+    18.13.0
+
+..\forum-api>npm -v
+10.9.4
+
+..\forum-api>node -v
+v22.21.1
+
+---
+..\forum-api>npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported    
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported        
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead  
+npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+npm warn deprecated gauge@3.0.2: This package is no longer supported.
+
+added 471 packages, and audited 472 packages in 3m
+
+43 packages are looking for funding
+  run `npm fund` for details
+
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+---
+..\forum-api>npm install eslint --save-dev
+
+added 55 packages, and audited 527 packages in 14s
+
+62 packages are looking for funding
+  run `npm fund` for details
+
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+---
+..\forum-api>npx eslint --init
+You can also run this command directly using 'npm init @eslint/config@latest'.
+Need to install the following packages:
+@eslint/create-config@1.11.0
+Ok to proceed? (y) y
+
+
+> forum-api@1.0.0 npx
+> create-config
+
+@eslint/create-config: v1.11.0
+
+√ What do you want to lint? · javascript
+√ How would you like to use ESLint? · problems
+√ What type of modules does your project use? · commonjs
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · No / Yes
+√ Where does your code run? · node                                        
+i The config that you've selected requires the following dependencies:
+
+eslint, @eslint/js, globals
+√ Would you like to install them now? · No / Yes
+√ Which package manager do you want to use? · npm
+☕️Installing...
+
+added 1 package, changed 1 package, and audited 528 packages in 5s
+
+63 packages are looking for funding
+  run `npm fund` for details
+
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+√ Successfully created D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\backend-expert-labs\forum-api\eslint.config.mjs file.
+
+---
+..\forum-api>npm install eslint-config-dicodingacademy --save-dev
+
+added 1 package, and audited 529 packages in 3s
+
+63 packages are looking for funding
+  run `npm fund` for details
+
+3 high severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+---
+Menyiapkan Kebutuhan Database
+---
+..\forum-api>psql --username postgres
+Password for user postgres:
+
+psql (13.21)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# CREATE DATABASE forumapi; CREATE DATABASE forumapi_test;
+CREATE DATABASE
+CREATE DATABASE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE forumapi, forumapi_test TO developer;
+GRANT
+postgres=# exit
+
+---
+..\forum-api>npm run migrate up
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate up
+
+> Migrating files:
+> - 1627983516963_create-table-users
+> - 1627983555473_create-table-authentications
+### MIGRATION 1627983516963_create-table-users (UP) ###
+CREATE TABLE "users" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "username" VARCHAR(50) UNIQUE NOT NULL,
+  "password" TEXT NOT NULL,
+  "fullname" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983516963_create-table-users', NOW());    
+
+### MIGRATION 1627983555473_create-table-authentications (UP) ###
+CREATE TABLE "authentications" (
+  "token" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983555473_create-table-authentications', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run migrate:test up
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1627983516963_create-table-users
+> - 1627983555473_create-table-authentications
+### MIGRATION 1627983516963_create-table-users (UP) ###
+CREATE TABLE "users" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "username" VARCHAR(50) UNIQUE NOT NULL,
+  "password" TEXT NOT NULL,
+  "fullname" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983516963_create-table-users', NOW());    
+
+### MIGRATION 1627983555473_create-table-authentications (UP) ###
+CREATE TABLE "authentications" (
+  "token" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983555473_create-table-authentications', NOW());
+
+Migrations complete!
+
+---
+Cek Database: forumapi & forumapi_test
+---
+..\forum-api>psql --username developer --dbname forumapi
+Password for user developer: 
+
+psql (13.21)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+forumapi=> \dt
+              List of relations
+ Schema |      Name       | Type  |   Owner   
+--------+-----------------+-------+-----------
+ public | authentications | table | developer
+ public | pgmigrations    | table | developer
+ public | users           | table | developer
+(3 rows)
+
+forumapi=> exit
+
+..\forum-api>psql --username developer --dbname forumapi_test
+Password for user developer: 
+
+psql (13.21)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+forumapi_test=> \dt
+              List of relations
+ Schema |      Name       | Type  |   Owner
+--------+-----------------+-------+-----------
+ public | authentications | table | developer
+ public | pgmigrations    | table | developer
+ public | users           | table | developer
+(3 rows)
+
+---
+Automation Testing
+---
+..\forum-api>npm run test
+                                                                                                                   
+Test Suites: 26 passed, 26 total                                                                                   
+Tests:       78 passed, 78 total
+Snapshots:   0 total
+Time:        18.44 s
+Ran all test suites.
+
+..\forum-api>npm run test:watch
+
+--------------------------------------|---------|----------|---------|---------|-------------------
+File                                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------------|---------|----------|---------|---------|-------------------
+All files                             |     100 |      100 |     100 |     100 |                   
+ Applications/security                |     100 |      100 |     100 |     100 |                   
+  AuthenticationTokenManager.js       |     100 |      100 |     100 |     100 |                   
+  PasswordHash.js                     |     100 |      100 |     100 |     100 |                   
+ Applications/use_case                |     100 |      100 |     100 |     100 |                   
+  AddUserUseCase.js                   |     100 |      100 |     100 |     100 |                   
+  DeleteAuthenticationUseCase.js      |     100 |      100 |     100 |     100 |                   
+  LoginUserUseCase.js                 |     100 |      100 |     100 |     100 |                   
+  LogoutUserUseCase.js                |     100 |      100 |     100 |     100 |                   
+  RefreshAuthenticationUseCase.js     |     100 |      100 |     100 |     100 |                   
+ Commons/exceptions                   |     100 |      100 |     100 |     100 |                   
+  AuthenticationError.js              |     100 |      100 |     100 |     100 |                   
+  AuthorizationError.js               |     100 |      100 |     100 |     100 |                   
+  ClientError.js                      |     100 |      100 |     100 |     100 |                  
+  DomainErrorTranslator.js            |     100 |      100 |     100 |     100 |                  
+  InvariantError.js                   |     100 |      100 |     100 |     100 |                  
+  NotFoundError.js                    |     100 |      100 |     100 |     100 |                  
+ Domains/authentications              |     100 |      100 |     100 |     100 |                  
+  AuthenticationRepository.js         |     100 |      100 |     100 |     100 |                  
+ Domains/authentications/entities     |     100 |      100 |     100 |     100 |                  
+  NewAuth.js                          |     100 |      100 |     100 |     100 |                  
+ Domains/users                        |     100 |      100 |     100 |     100 |                  
+  UserRepository.js                   |     100 |      100 |     100 |     100 |                  
+ Domains/users/entities               |     100 |      100 |     100 |     100 |                  
+  RegisterUser.js                     |     100 |      100 |     100 |     100 |                  
+  RegisteredUser.js                   |     100 |      100 |     100 |     100 |                  
+  UserLogin.js                        |     100 |      100 |     100 |     100 |                  
+ Infrastructures/http                 |     100 |      100 |     100 |     100 |                  
+  createServer.js                     |     100 |      100 |     100 |     100 |                  
+ Infrastructures/repository           |     100 |      100 |     100 |     100 |                  
+  AuthenticationRepositoryPostgres.js |     100 |      100 |     100 |     100 |                  
+  UserRepositoryPostgres.js           |     100 |      100 |     100 |     100 |                  
+ Infrastructures/security             |     100 |      100 |     100 |     100 |                  
+  BcryptPasswordHash.js               |     100 |      100 |     100 |     100 |                  
+  JwtTokenManager.js                  |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/authentications  |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/users            |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+--------------------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 26 passed, 26 total
+Tests:       78 passed, 78 total
+Snapshots:   0 total
+Time:        7.343 s, estimated 17 s
+Ran all test suites.
+
+---
+..\forum-api>npm run start:dev
+
+> forum-api@1.0.0 start:dev
+> nodemon src/app.js
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/app.js`
+server start at http://localhost:5000
+
+---
+Database migrations
+---
+..\forum-api>npm run migrate create "create table threads"
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate create create table threads
+
+Created migration -- D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\backend-expert-labs\forum-api/migrations/1762159544648_create-table-threads.js
+
+..\forum-api>npm run migrate up
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate up
+
+> Migrating files:
+> - 1762159544648_create-table-threads
+### MIGRATION 1762159544648_create-table-threads (UP) ###
+CREATE TABLE "threads" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "title" TEXT NOT NULL,
+  "body" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES "users"(id) ON DELETE CASCADE,
+  "date" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762159544648_create-table-threads', NOW());
+
+Migrations complete!
+
+..\forum-api>npm run migrate:test up
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1762159544648_create-table-threads
+### MIGRATION 1762159544648_create-table-threads (UP) ###
+CREATE TABLE "threads" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "title" TEXT NOT NULL,
+  "body" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES "users"(id) ON DELETE CASCADE,       
+  "date" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762159544648_create-table-threads', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 30 passed, 30 total
+Tests:       88 passed, 88 total
+Snapshots:   0 total
+Time:        5.833 s
+Ran all test suites.
+
+---
+..\forum-api>npm run start:dev       
+
+> forum-api@1.0.0 start:dev
+> nodemon src/app.js
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/app.js`
+server start at http://localhost:5000
+
+---
+Postman Testing
+---
+Forum API V1 Test:
+✅Users => Passed(20) Failed(0) Skipped(0)
+✅Authentications => Passed(16) Failed(0) Skipped(0)
+✅Threads => Passed(14) Failed(0) Skipped(0)
+
+---
+Database migrations
+---
+..\forum-api>npm run migrate create "create table comments"
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate create create table comments
+
+Created migration -- D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\backend-expert-labs\forum-api/migrations/1762442072579_create-table-comments.js
+
+..\forum-api>npm run migrate up
+
+> forum-api@1.0.0 migrate
+> Migrating files:
+> - 1762442072579_create-table-comments
+### MIGRATION 1762442072579_create-table-comments (UP) ###
+CREATE TABLE "comments" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  "thread_id" VARCHAR(50) NOT NULL REFERENCES threads(id) ON DELETE CASCADE,
+  "date" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762442072579_create-table-comments', NOW());
+
+Migrations complete!
+
+..\forum-api>npm run migrate:test up
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1762442072579_create-table-comments
+### MIGRATION 1762442072579_create-table-comments (UP) ###
+CREATE TABLE "comments" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  "thread_id" VARCHAR(50) NOT NULL REFERENCES threads(id) ON DELETE CASCADE,
+  "date" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762442072579_create-table-comments', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 33 passed, 33 total
+Tests:       96 passed, 96 total
+Snapshots:   0 total
+Time:        8.911 s, estimated 12 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       101 passed, 101 total
+Snapshots:   0 total
+Time:        10.663 s, estimated 11 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       102 passed, 102 total
+Snapshots:   0 total
+Time:        5.297 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       103 passed, 103 total
+Snapshots:   0 total
+Time:        4.643 s, estimated 5 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       104 passed, 104 total
+Snapshots:   0 total
+Time:        4.702 s, estimated 5 s
+Ran all test suites.
+
+---
+Database migrations
+---
+..\forum-api>npm run migrate create "add column is_delete to table comments"
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate create add column is_delete to table comments
+
+Created migration -- D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\backend-expert-labs\forum-api/migrations/1762482352718_add-column-is-delete-to-table-comments.js
+
+..\forum-api>npm run migrate up     
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate up
+
+> Migrating files:
+> - 1762482352718_add-column-is-delete-to-table-comments
+### MIGRATION 1762482352718_add-column-is-delete-to-table-comments (UP) ###
+ALTER TABLE "comments"
+  ADD "is_delete" BOOLEAN DEFAULT false NOT NULL;
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762482352718_add-column-is-delete-to-table-comments', NOW());
+
+Migrations complete!
+
+..\forum-api>npm run migrate:test up   
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1762482352718_add-column-is-delete-to-table-comments
+### MIGRATION 1762482352718_add-column-is-delete-to-table-comments (UP) ###
+ALTER TABLE "comments"
+  ADD "is_delete" BOOLEAN DEFAULT false NOT NULL;
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762482352718_add-column-is-delete-to-table-comments', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       107 passed, 107 total
+Snapshots:   0 total
+Time:        9.305 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       109 passed, 109 total
+Snapshots:   0 total
+Time:        9.275 s, estimated 11 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 35 passed, 35 total
+Tests:       110 passed, 110 total
+Snapshots:   0 total
+Time:        10.103 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 36 passed, 36 total
+Tests:       116 passed, 116 total
+Snapshots:   0 total
+Time:        9.3 s, estimated 10 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 37 passed, 37 total
+Tests:       123 passed, 123 total
+Snapshots:   0 total
+Time:        5.175 s
+Ran all test suites.
+
+---
+..\forum-api>npm run start:dev
+
+> forum-api@1.0.0 start:dev
+> nodemon src/app.js
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/app.js`
+server start at http://localhost:5000
+
+---
+Postman Testing
+---
+Forum API V1 Test:
+✅Users => Passed(20) Failed(0) Skipped(0)
+✅Authentications => Passed(16) Failed(0) Skipped(0)
+✅Threads => Passed(14) Failed(0) Skipped(0)
+✅Comments => Passed(24) Failed(0) Skipped(0)
+
+---
+Membersihkan seluruh isi table pada database dengan TRUNCATE
+---
+forumapi=> truncate users, authentications, threads, comments;
+
+---
+Database migrations
+---
+..\forum-api>npm run migrate create "create table comment_replies"
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate create create table comment_replies
+
+Created migration -- D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\backend-expert-labs\forum-api/migrations/1762554554214_create-table-comment-replies.js
+
+..\forum-api>npm run migrate up     
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate up
+
+> Migrating files:
+> - 1762554554214_create-table-comment-replies
+### MIGRATION 1762554554214_create-table-comment-replies (UP) ###
+CREATE TABLE "comment_replies" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  "comment_id" VARCHAR(50) NOT NULL REFERENCES comments(id) ON DELETE CASCADE,        
+  "date" TEXT NOT NULL,
+  "is_delete" BOOLEAN DEFAULT false NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762554554214_create-table-comment-replies', NOW());
+
+Migrations complete!
+
+..\forum-api>npm run migrate:test up
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1762554554214_create-table-comment-replies
+### MIGRATION 1762554554214_create-table-comment-replies (UP) ###
+CREATE TABLE "comment_replies" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  "comment_id" VARCHAR(50) NOT NULL REFERENCES comments(id) ON DELETE CASCADE,        
+  "date" TEXT NOT NULL,
+  "is_delete" BOOLEAN DEFAULT false NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762554554214_create-table-comment-replies', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 41 passed, 41 total
+Tests:       142 passed, 142 total
+Snapshots:   0 total
+Time:        6.059 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 41 passed, 41 total
+Tests:       143 passed, 143 total
+Snapshots:   0 total
+Time:        5.799 s, estimated 6 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 41 passed, 41 total
+Tests:       147 passed, 147 total     
+Snapshots:   0 total
+Time:        5.339 s, estimated 6 s    
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 42 passed, 42 total
+Tests:       152 passed, 152 total
+Snapshots:   0 total
+Time:        5.997 s, estimated 6 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 42 passed, 42 total
+Tests:       155 passed, 155 total
+Snapshots:   0 total
+Time:        6.728 s, estimated 8 s
+Ran all test suites.
+
+---
+..\forum-api>npm run test:watch
+ PASS  src/Infrastructures/http/_test/authentications.test.js
+ PASS  src/Infrastructures/http/_test/comment_replies.test.js
+ PASS  src/Infrastructures/http/_test/comments.test.js
+ PASS  src/Infrastructures/http/_test/threads.test.js
+ PASS  src/Infrastructures/http/_test/users.test.js
+ PASS  src/Infrastructures/security/_test/BcryptPasswordHash.test.js
+ PASS  src/Infrastructures/repository/_test/CommentReplyRepositoryPostgres.test.js
+ PASS  src/Infrastructures/http/_test/createServer.test.js
+ PASS  src/Infrastructures/repository/_test/ThreadRepositoryPostgres.test.js
+ PASS  src/Infrastructures/repository/_test/CommentRepositoryPostgress.test.js
+ PASS  src/Infrastructures/repository/_test/UserRepositoryPostgres.test.js
+ PASS  src/Applications/use_case/_test/AddUserUseCase.test.js
+ PASS  src/Infrastructures/repository/_test/AuthenticationRepositoryPostgres.test.js
+ PASS  src/Infrastructures/security/_test/JwtTokenManager.test.js
+ PASS  src/Domains/users/entities/_test/RegisteredUser.test.js
+ PASS  src/Applications/use_case/_test/AddCommentReplyUseCase.test.js
+ PASS  src/Applications/use_case/_test/GetThreadDetailUseCase.test.js
+ PASS  src/Domains/threads/entities/_test/ThreadDetail.test.js
+ PASS  src/Domains/users/entities/_test/RegisterUser.test.js
+ PASS  src/Applications/security/_test/PasswordHash.test.js
+ PASS  src/Commons/exceptions/_test/AuthenticationError.test.js
+ PASS  src/Applications/use_case/_test/DeleteCommentUseCase.test.js
+ PASS  src/Domains/comments/entities/_test/CommentReply.test.js
+ PASS  src/Applications/use_case/_test/DeleteCommentReplyUseCase.test.js
+ PASS  src/Domains/users/_test/UserRepository.test.js
+ PASS  src/Domains/threads/entities/_test/Thread.test.js
+ PASS  src/Applications/use_case/_test/DeleteAuthenticationUseCase.test.js
+ PASS  src/Applications/use_case/_test/RefreshAuthenticationUseCase.test.js
+ PASS  src/Domains/comments/entities/_test/Comment.test.js
+ PASS  src/Applications/use_case/_test/LogoutUserUseCase.test.js
+ PASS  src/Domains/users/entities/_test/UserLogin.test.js
+ PASS  src/Domains/authentications/entities/_test/NewAuth.test.js
+ PASS  src/Commons/utils/_test/mapper.test.js
+ PASS  src/Domains/comments/_test/CommentReplyRepository.test.js
+ PASS  src/Applications/use_case/_test/AddCommentUseCase.test.js
+ PASS  src/Domains/authentications/_test/AuthenticationRepository.test.js
+ PASS  src/Commons/exceptions/_test/DomainErrorTranslator.test.js
+ PASS  src/Commons/exceptions/_test/AuthorizationError.test.js
+ PASS  src/Commons/exceptions/_test/NotFoundError.test.js
+ PASS  src/Domains/threads/_test/ThreadRepository.test.js
+ PASS  src/Applications/use_case/_test/AddThreadUseCase.test.js
+ PASS  src/Applications/use_case/_test/LoginUserUseCase.test.js
+ PASS  src/Domains/comments/_test/CommentRepository.test.js
+ PASS  src/Commons/exceptions/_test/ClientError.test.js
+ PASS  src/Commons/exceptions/_test/InvariantError.test.js
+ PASS  src/Applications/security/_test/AuthenticationTokenManager.test.js
+--------------------------------------|---------|----------|---------|---------|-------------------                      
+File                                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                       
+--------------------------------------|---------|----------|---------|---------|-------------------
+All files                             |     100 |      100 |     100 |     100 |                  
+ Applications/security                |     100 |      100 |     100 |     100 |                  
+  AuthenticationTokenManager.js       |     100 |      100 |     100 |     100 |                  
+  PasswordHash.js                     |     100 |      100 |     100 |     100 |                  
+ Applications/use_case                |     100 |      100 |     100 |     100 |                  
+  AddCommentReplyUseCase.js           |     100 |      100 |     100 |     100 |                  
+  AddCommentUseCase.js                |     100 |      100 |     100 |     100 |                  
+  AddThreadUseCase.js                 |     100 |      100 |     100 |     100 |                  
+  AddUserUseCase.js                   |     100 |      100 |     100 |     100 |                  
+  DeleteAuthenticationUseCase.js      |     100 |      100 |     100 |     100 |                  
+  DeleteCommentReplyUseCase.js        |     100 |      100 |     100 |     100 |                  
+  DeleteCommentUseCase.js             |     100 |      100 |     100 |     100 |                  
+  GetThreadDetailUseCase.js           |     100 |      100 |     100 |     100 |                  
+  LoginUserUseCase.js                 |     100 |      100 |     100 |     100 |                  
+  LogoutUserUseCase.js                |     100 |      100 |     100 |     100 |                  
+  RefreshAuthenticationUseCase.js     |     100 |      100 |     100 |     100 |                  
+ Commons/exceptions                   |     100 |      100 |     100 |     100 |                  
+  AuthenticationError.js              |     100 |      100 |     100 |     100 |                  
+  AuthorizationError.js               |     100 |      100 |     100 |     100 |                  
+  ClientError.js                      |     100 |      100 |     100 |     100 |                  
+  DomainErrorTranslator.js            |     100 |      100 |     100 |     100 |                  
+  InvariantError.js                   |     100 |      100 |     100 |     100 |                  
+  NotFoundError.js                    |     100 |      100 |     100 |     100 |                  
+ Commons/utils                        |     100 |      100 |     100 |     100 |                  
+  mapper.js                           |     100 |      100 |     100 |     100 |                  
+ Domains/authentications              |     100 |      100 |     100 |     100 |                  
+  AuthenticationRepository.js         |     100 |      100 |     100 |     100 |                  
+ Domains/authentications/entities     |     100 |      100 |     100 |     100 |                  
+  NewAuth.js                          |     100 |      100 |     100 |     100 |                  
+ Domains/comments                     |     100 |      100 |     100 |     100 |                  
+  CommentReplyRepository.js           |     100 |      100 |     100 |     100 |                  
+  CommentRepository.js                |     100 |      100 |     100 |     100 |                  
+ Domains/comments/entities            |     100 |      100 |     100 |     100 |                  
+  Comment.js                          |     100 |      100 |     100 |     100 |                  
+  CommentReply.js                     |     100 |      100 |     100 |     100 |                  
+ Domains/threads                      |     100 |      100 |     100 |     100 |                  
+  ThreadRepository.js                 |     100 |      100 |     100 |     100 |                  
+ Domains/threads/entities             |     100 |      100 |     100 |     100 |                  
+  Thread.js                           |     100 |      100 |     100 |     100 |                  
+  ThreadDetail.js                     |     100 |      100 |     100 |     100 |                  
+ Domains/users                        |     100 |      100 |     100 |     100 |                  
+  UserRepository.js                   |     100 |      100 |     100 |     100 |                  
+ Domains/users/entities               |     100 |      100 |     100 |     100 |                   
+  RegisterUser.js                     |     100 |      100 |     100 |     100 |                  
+  RegisteredUser.js                   |     100 |      100 |     100 |     100 |                  
+  UserLogin.js                        |     100 |      100 |     100 |     100 |                  
+ Infrastructures/http                 |     100 |      100 |     100 |     100 |                  
+  createServer.js                     |     100 |      100 |     100 |     100 |                  
+ Infrastructures/repository           |     100 |      100 |     100 |     100 |                  
+  AuthenticationRepositoryPostgres.js |     100 |      100 |     100 |     100 |                  
+  CommentReplyRepositoryPostgres.js   |     100 |      100 |     100 |     100 |                  
+  CommentRepositoryPostgres.js        |     100 |      100 |     100 |     100 |                  
+  ThreadRepositoryPostgres.js         |     100 |      100 |     100 |     100 |                  
+  UserRepositoryPostgres.js           |     100 |      100 |     100 |     100 |                  
+ Infrastructures/security             |     100 |      100 |     100 |     100 |                  
+  BcryptPasswordHash.js               |     100 |      100 |     100 |     100 |                  
+  JwtTokenManager.js                  |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/authentications  |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/comment_replies  |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/comments         |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/threads          |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+ Interfaces/http/api/users            |     100 |      100 |     100 |     100 |                  
+  handler.js                          |     100 |      100 |     100 |     100 |                  
+  index.js                            |     100 |      100 |     100 |     100 |                  
+  routes.js                           |     100 |      100 |     100 |     100 |                  
+--------------------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 46 passed, 46 total
+Tests:       185 passed, 185 total
+Snapshots:   0 total
+Time:        9.162 s, estimated 11 s
+Ran all test suites.
+
+---
+$ npm run lint
+
+> forum-api@1.0.0 lint
+> eslint .
+
+$ npm run lint:fix
+
+> forum-api@1.0.0 lint:fix
+> eslint . --fix
+
+---
+Postman Testing
+---
+Forum API V1 Test:
+All Tests => Passed(98) Failed(0) Skipped(0)
+✅Users => Passed(20) Failed(0) Skipped(0)
+✅Authentications => Passed(16) Failed(0) Skipped(0)
+✅Threads => Passed(14) Failed(0) Skipped(0)
+✅Comments => Passed(24) Failed(0) Skipped(0)
+✅[Optional] Replies => Passed(24) Failed(0) Skipped(0)
+
+---
+REVISI
+---
+..\forum-api>npm run migrate up
+
+> forum-api@1.0.0 migrate
+> node-pg-migrate up
+
+---
+..\forum-api>npm run migrate:test up
+
+> forum-api@1.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1627983516963_create-table-users
+> - 1627983555473_create-table-authentications
+> - 1762159544648_create-table-threads
+> - 1762442072579_create-table-comments
+> - 1762554554214_create-table-replies
+### MIGRATION 1627983516963_create-table-users (UP) ###
+CREATE TABLE "users" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "username" VARCHAR(50) UNIQUE NOT NULL,
+  "password" TEXT NOT NULL,
+  "fullname" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983516963_create-table-users', NOW());
+
+
+### MIGRATION 1627983555473_create-table-authentications (UP) ###
+CREATE TABLE "authentications" (
+  "token" TEXT NOT NULL
+);
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1627983555473_create-table-authentications', NOW());
+
+
+### MIGRATION 1762159544648_create-table-threads (UP) ###
+CREATE TABLE "threads" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "title" TEXT NOT NULL,
+  "body" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL,
+  "date" TEXT NOT NULL
+);
+ALTER TABLE "threads"
+  ADD CONSTRAINT "fk_threads.owner_users.id" FOREIGN KEY ("owner") REFERENCES users(id) ON DELETE CASCADE;
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762159544648_create-table-threads', NOW());
+
+
+### MIGRATION 1762442072579_create-table-comments (UP) ###
+CREATE TABLE "comments" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "thread_id" VARCHAR(50) NOT NULL,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL,
+  "date" TIMESTAMP NOT NULL,
+  "is_delete" BOOLEAN DEFAULT false NOT NULL
+);
+ALTER TABLE "comments"
+  ADD CONSTRAINT "fk_comments.thread_id_threads.id" FOREIGN KEY ("thread_id") REFERENCES threads(id) ON DELETE CASCADE;
+ALTER TABLE "comments"
+  ADD CONSTRAINT "fk_comments.owner_users.id" FOREIGN KEY ("owner") REFERENCES users(id) ON DELETE CASCADE;
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762442072579_create-table-comments', NOW());
+
+
+### MIGRATION 1762554554214_create-table-replies (UP) ###
+CREATE TABLE "replies" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "comment_id" VARCHAR(50) NOT NULL,
+  "content" TEXT NOT NULL,
+  "owner" VARCHAR(50) NOT NULL,
+  "date" TIMESTAMP NOT NULL,
+  "is_delete" BOOLEAN DEFAULT false NOT NULL
+);
+ALTER TABLE "replies"
+  ADD CONSTRAINT "fk_replies.comment_id_comments.id" FOREIGN KEY ("comment_id") REFERENCES comments(id) ON DELETE CASCADE;
+ALTER TABLE "replies"
+  ADD CONSTRAINT "fk_replies.owner_users.id" FOREIGN KEY ("owner") REFERENCES users(id) ON DELETE CASCADE;
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1762554554214_create-table-replies', NOW());
+
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 48 passed, 48 total
+Tests:       154 passed, 154 total
+Snapshots:   0 total
+Time:        11.622 s
+Ran all test suites.
+
+---
+Postman Testing
+---
+Forum API V1 Test:
+All Tests => Passed(98) Failed(0) Skipped(0)
+✅Users => Passed(20) Failed(0) Skipped(0)
+✅Authentications => Passed(16) Failed(0) Skipped(0)
+✅Threads => Passed(14) Failed(0) Skipped(0)
+✅Comments => Passed(24) Failed(0) Skipped(0)
+✅[Optional] Replies => Passed(24) Failed(0) Skipped(0)

@@ -1,0 +1,39 @@
+{
+  "name": "forum-api",
+  "version": "2.0.0",
+  "description": "Submission Dicoding: Menjadi Back-End Developer Expert dengan JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:dev": "nodemon src/app.js",
+    "test": "jest --setupFiles dotenv/config -i",
+    "test:watch:change": "jest --watch --setupFiles dotenv/config -i",
+    "test:watch": "jest --watchAll --coverage --setupFiles dotenv/config -i",
+    "migrate": "node-pg-migrate",
+    "migrate:test": "node-pg-migrate -f config/database/test.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "w1y0n0 <wiyono30@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/jwt": "^3.2.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "instances-container": "^2.0.6",
+    "nanoid": "^3.3.11",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.29.0",
+    "eslint-config-dicodingacademy": "^0.9.5",
+    "globals": "^16.2.0",
+    "jest": "^30.0.0",
+    "node-pg-migrate": "^8.0.3",
+    "nodemon": "^3.1.10"
+  }
+}
