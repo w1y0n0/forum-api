@@ -1,6 +1,18 @@
+const pool = require('../../database/postgres/pool');
+const UsersTableTestHelper = require('../../../../tests/UsersTableTestHelper');
+const AuthenticationsTableTestHelper = require('../../../../tests/AuthenticationsTableTestHelper');
 const createServer = require('../createServer');
 
 describe('HTTP server', () => {
+  afterAll(async () => {
+    await pool.end();
+  });
+
+  afterEach(async () => {
+    await UsersTableTestHelper.cleanTable();
+    await AuthenticationsTableTestHelper.cleanTable();
+  });
+
   it('should response 404 when request unregistered route', async () => {
     // Arrange
     const server = await createServer({});
