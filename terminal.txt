@@ -963,3 +963,77 @@ All Tests => Passed(98) Failed(0) Skipped(0)
 ✅Threads => Passed(14) Failed(0) Skipped(0)
 ✅Comments => Passed(24) Failed(0) Skipped(0)
 ✅[Optional] Replies => Passed(24) Failed(0) Skipped(0)
+
+---
+Proyek CI/CD dan security
+---
+../forum-api (main)
+$ git checkout -b feature-like-comments
+Switched to a new branch 'feature-like-comments'
+
+../forum-api (feature-like-comments)
+$
+
+---
+..\forum-api>npm run migrate create "create table comment_likes"   
+
+> forum-api@2.0.0 migrate
+> node-pg-migrate create create table comment_likes
+
+Created migration -- D:\Programming\Dicoding\Dicoding-Back-End\7_Menjadi_Back-End_Developer_Expert\files\sub-2\w1y0n0-backend-expert-labs-820312d\forum-api\migrations\1765602346701_create-table-comment-likes.js
+
+..\forum-api>npm run migrate up
+
+> forum-api@2.0.0 migrate
+> node-pg-migrate up     
+
+> Migrating files:
+> - 1765602346701_create-table-comment-likes
+### MIGRATION 1765602346701_create-table-comment-likes (UP) ###
+CREATE TABLE "comment_likes" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "comment_id" VARCHAR(50) NOT NULL,
+  "user_id" VARCHAR(50) NOT NULL,
+  "date" TIMESTAMP DEFAULT current_timestamp NOT NULL
+);
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "fk_comment_likes.comment_id_comments.id" FOREIGN KEY ("comment_id") REFERENCES comments(id) ON DELETE CASCADE;
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "fk_comment_likes.user_id_users.id" FOREIGN KEY ("user_id") REFERENCES users(id) ON DELETE CASCADE;
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "unique_comment_like_per_user" UNIQUE ("comment_id", "user_id");
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1765602346701_create-table-comment-likes', NOW());
+
+Migrations complete!
+
+..\forum-api>npm run migrate:test up
+
+> forum-api@2.0.0 migrate:test
+> node-pg-migrate -f config/database/test.json up
+
+> Migrating files:
+> - 1765602346701_create-table-comment-likes
+### MIGRATION 1765602346701_create-table-comment-likes (UP) ###
+CREATE TABLE "comment_likes" (
+  "id" VARCHAR(50) PRIMARY KEY,
+  "comment_id" VARCHAR(50) NOT NULL,
+  "user_id" VARCHAR(50) NOT NULL,
+  "date" TIMESTAMP DEFAULT current_timestamp NOT NULL
+);
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "fk_comment_likes.comment_id_comments.id" FOREIGN KEY ("comment_id") REFERENCES comments(id) ON DELETE CASCADE;
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "fk_comment_likes.user_id_users.id" FOREIGN KEY ("user_id") REFERENCES users(id) ON DELETE CASCADE;
+ALTER TABLE "comment_likes"
+  ADD CONSTRAINT "unique_comment_like_per_user" UNIQUE ("comment_id", "user_id");
+INSERT INTO "public"."pgmigrations" (name, run_on) VALUES ('1765602346701_create-table-comment-likes', NOW());
+
+Migrations complete!
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 1 failed, 48 passed, 49 total
+Tests:       1 failed, 166 passed, 167 total
+Snapshots:   0 total
+Time:        46.486 s
+Ran all test suites.

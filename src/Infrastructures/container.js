@@ -36,6 +36,9 @@ const DeleteCommentUseCase = require('../Applications/use_case/DeleteCommentUseC
 const AddReplyUseCase = require('../Applications/use_case/AddReplyUseCase');
 const DeleteReplyUseCase = require('../Applications/use_case/DeleteReplyUseCase');
 
+// use case: comment likes
+const ToggleLikeCommentUseCase = require('../Applications/use_case/ToggleLikeCommentUseCase');
+
 // repository domain
 const AuthenticationRepository = require('../Domains/authentications/AuthenticationRepository');
 const ThreadRepository = require('../Domains/threads/ThreadRepository');
@@ -234,6 +237,17 @@ container.register([
         { name: 'replyRepository', internal: ReplyRepository.name },
         { name: 'commentRepository', internal: CommentRepository.name },
         { name: 'threadRepository', internal: ThreadRepository.name },
+      ],
+    },
+  },
+  {
+    key: ToggleLikeCommentUseCase.name,
+    Class: ToggleLikeCommentUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        { name: 'threadRepository', internal: ThreadRepository.name },
+        { name: 'commentRepository', internal: CommentRepository.name },
       ],
     },
   },
