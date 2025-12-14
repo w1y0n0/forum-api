@@ -967,6 +967,8 @@ All Tests => Passed(98) Failed(0) Skipped(0)
 ---
 Proyek CI/CD dan security
 ---
+bash
+----
 ../forum-api (main)
 $ git checkout -b feature-like-comments
 Switched to a new branch 'feature-like-comments'
@@ -1037,3 +1039,37 @@ Tests:       1 failed, 166 passed, 167 total
 Snapshots:   0 total
 Time:        46.486 s
 Ran all test suites.
+
+---
+bash
+----
+../forum-api (feature-like-comments)
+$ git add .
+
+../forum-api (feature-like-comments)
+$ git commit -m "add like comments test case"
+
+../forum-api (feature-like-comments)
+$ git push origin feature-like-comments
+
+---
+..\forum-api>npm run lint
+✖ 64 problems (64 errors, 0 warnings)
+  54 errors and 0 warnings potentially fixable with the `--fix` option.
+
+..\forum-api>npm run lint:fix
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 49 passed, 49 total
+Tests:       166 passed, 166 total
+Snapshots:   0 total
+Time:        49.081 s
+Ran all test suites.
+
+---
+bash
+----
+../forum-api (feature-like-comments)
+$ git add .
+

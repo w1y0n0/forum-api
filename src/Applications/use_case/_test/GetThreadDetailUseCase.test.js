@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const GetThreadDetailUseCase = require('../GetThreadDetailUseCase');
 const ThreadRepository = require('../../../Domains/threads/ThreadRepository');
 const CommentRepository = require('../../../Domains/comments/CommentRepository');
