@@ -1073,3 +1073,17 @@ bash
 ../forum-api (feature-like-comments)
 $ git add .
 
+../forum-api (feature-like-comments)
+$ git commit -m "pass like comments test case"
+
+../forum-api (feature-like-comments)
+$ git push origin feature-like-comments
+
+../forum-api (feature-like-comments)
+$ git add .
+
+../forum-api (feature-like-comments)
+$ git commit -m "update node version ci yml"
+
+../forum-api (feature-like-comments)
+$ git push origin feature-like-comments
