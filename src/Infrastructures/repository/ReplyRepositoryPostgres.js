@@ -73,7 +73,7 @@ class ReplyRepositoryPostgres extends ReplyRepository {
         FROM replies
         INNER JOIN users ON replies.owner = users.id
         WHERE replies.comment_id = ANY($1::VARCHAR[])
-        ORDER BY replies.date ASC
+        ORDER BY replies.date ASC, replies.id ASC
       `,
       values: [commentIds],
     };
