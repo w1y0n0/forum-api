@@ -28,12 +28,19 @@ class GetThreadDetailUseCase {
       });
     });
 
+    const likeCounts = {};
+    await Promise.all(comments.map(async (comment) => {
+      const count = await this._commentRepository.getLikeCountByCommentId(comment.id);
+      likeCounts[comment.id] = count;
+    }));
+
     const formattedComments = comments.map((comment) => ({
       id: comment.id,
       username: comment.username,
       date: comment.date,
       replies: repliesGrouped[comment.id] || [],
       content: comment.is_delete ? '**komentar telah dihapus**' : comment.content,
+      likeCount: likeCounts[comment.id] || 0,
     }));
 
     return {
@@ -41,6 +48,7 @@ class GetThreadDetailUseCase {
       comments: formattedComments,
     };
   }
+
 }
 
 module.exports = GetThreadDetailUseCase;

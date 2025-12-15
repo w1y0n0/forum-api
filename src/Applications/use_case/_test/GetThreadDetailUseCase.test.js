@@ -5,7 +5,7 @@ const CommentRepository = require('../../../Domains/comments/CommentRepository')
 const ReplyRepository = require('../../../Domains/replies/ReplyRepository');
 
 describe('GetThreadDetailUseCase', () => {
-  it('should orchestrate the get thread detail action correctly including comments and replies', async () => {
+  it('should orchestrate the get thread detail action correctly including comments, replies, and likeCount', async () => {
     // Arrange
     const mockThreadId = 'thread-123';
 
@@ -53,6 +53,11 @@ describe('GetThreadDetailUseCase', () => {
       },
     ];
 
+    const likeCounts = {
+      'comment-123': 2,
+      'comment-456': 0,
+    };
+
     const expectedThreadDetail = {
       id: 'thread-123',
       title: 'Sebuah thread',
@@ -65,6 +70,7 @@ describe('GetThreadDetailUseCase', () => {
           username: 'user1',
           date: '2021-08-08T07:22:33.555Z',
           content: 'komentar pertama',
+          likeCount: 2,
           replies: [
             {
               id: 'reply-123',
@@ -85,6 +91,7 @@ describe('GetThreadDetailUseCase', () => {
           username: 'user2',
           date: '2021-08-08T07:26:21.338Z',
           content: '**komentar telah dihapus**',
+          likeCount: 0,
           replies: [],
         },
       ],
@@ -103,6 +110,11 @@ describe('GetThreadDetailUseCase', () => {
       repliesMockResponse.map((reply) => ({ ...reply }))
     );
 
+    // Tambahkan mock like count
+    mockCommentRepository.getLikeCountByCommentId = jest.fn((commentId) =>
+      Promise.resolve(likeCounts[commentId])
+    );
+
     const getThreadDetailUseCase = new GetThreadDetailUseCase({
       threadRepository: mockThreadRepository,
       commentRepository: mockCommentRepository,
@@ -118,5 +130,9 @@ describe('GetThreadDetailUseCase', () => {
     expect(mockThreadRepository.getThreadDetail).toHaveBeenCalledWith(mockThreadId);
     expect(mockCommentRepository.getCommentsByThreadId).toHaveBeenCalledWith(mockThreadId);
     expect(mockReplyRepository.getRepliesByCommentIds).toHaveBeenCalledWith(['comment-123', 'comment-456']);
+
+    expect(mockCommentRepository.getLikeCountByCommentId).toHaveBeenCalledTimes(2);
+    expect(mockCommentRepository.getLikeCountByCommentId).toHaveBeenCalledWith('comment-123');
+    expect(mockCommentRepository.getLikeCountByCommentId).toHaveBeenCalledWith('comment-456');
   });
 });
