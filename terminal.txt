@@ -1087,3 +1087,17 @@ $ git commit -m "update node version ci yml"
 
 ../forum-api (feature-like-comments)
 $ git push origin feature-like-comments
+
+---
+..\forum-api>npm run test:watch
+Test Suites: 49 passed, 49 total
+Tests:       166 passed, 166 total
+Snapshots:   0 total
+Time:        28.326 s, estimated 31 s
+Ran all test suites.
+
+---
+Postman Testing
+---
+Forum API V2 Test:
+All Tests => Passed(118) Failed(0) Skipped(0)

@@ -110,7 +110,7 @@ describe('GetThreadDetailUseCase', () => {
       repliesMockResponse.map((reply) => ({ ...reply }))
     );
 
-    // Tambahkan mock like count
+    // 👉 Tambahkan mock like count
     mockCommentRepository.getLikeCountByCommentId = jest.fn((commentId) =>
       Promise.resolve(likeCounts[commentId])
     );
